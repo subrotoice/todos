@@ -6,7 +6,7 @@ export default function Footer() {
     width: "100%"
   }
   return (
-    <footer style={footerStyle}>
+    <footer>
       <p className='bg-dark text-light text-center'>Copyright &copy; Subroto 2023</p>
     </footer>
   )
