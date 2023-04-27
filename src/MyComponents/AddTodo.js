@@ -1,20 +1,18 @@
 import React, { useState } from 'react'
 
-export const AddTodo = (props) => {
+export const AddTodo = (props) => {  // Taking function as argument(props)
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
-  const submit = (e)=>{
+  const submit = (e)=>{  // OnSubmit has this function
     e.preventDefault();
     if(!title || !desc) {
-        alert("Title and Description can not be Blank");
+      alert("Title and Description can not be Blank");
+    } else {
+      props.addTodo(title, desc);
+      setTitle("");
+      setDesc("");
     }
-    props.addTodo(title, desc);
   }
-  const person = {
-    name: "Obaseki Nosa",
-    location: "Lagos",
-}
-
 
   return (
     <div className='container py-3'>

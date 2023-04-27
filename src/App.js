@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'; // Include CSS External
 import Header from "./MyComponents/Header";
 import Todos from "./MyComponents/Todos";
 import Footer from "./MyComponents/Footer";
@@ -35,12 +35,13 @@ function App() {
     setTodos([...todos, myTodo]);
   }
   const [todos, setTodos] = useState(initTodos);
+  // Think: when setTodos call then all code in useEffect will execute. 
   useEffect(()=>{
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
-
-  return (
-    <>
+  {/* Think React way: All code is here, Just include from other way */} 
+  return ( 
+    <>  
       <Header title="Subroto's Todos" searchBar={false} /> {/* bool value er joonno {} */} 
       <AddTodo addTodo={addTodo} />
       <Todos todos={todos} onDelete={onDelete} />
