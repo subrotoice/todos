@@ -18,9 +18,10 @@ export const AddTodo = (props) => {
 
   return (
     <div className='container py-3'>
-        {localStorage.setItem("lastname", "Smith")}
+        {/* {localStorage.setItem("lastname", "Smith")}
         {localStorage.getItem("lastname")}
-        {window.localStorage.setItem('user', JSON.stringify(person))}
+        {window.localStorage.setItem('user', JSON.stringify(person))} // JSON fromat
+        {localStorage.getItem('user')} */}
         <form onSubmit={submit}>
             <div className="mb-3">
                 <label htmlFor="title" className="form-label">Title</label>
