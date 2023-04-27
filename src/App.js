@@ -6,11 +6,6 @@ import {AddTodo} from "./MyComponents/AddTodo";
 import { useEffect, useState } from 'react';
 
 function App() {
-  let arr1 = [0, 1, 2];
-  const arr2 = [3, 4, 5];
-  arr1 = [...arr1, arr2];
-  console
-  alert(arr1);
   let initTodos;
   if(localStorage.getItem('todos')===null) { // checking local storage and initTodos Seted to state variable
     initTodos = [];   
